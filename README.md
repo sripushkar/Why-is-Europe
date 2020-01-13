@@ -12,3 +12,10 @@
 <br>
 <p>This is the result of the script with the default query, as of January 13, 2020</p>
 <img src="example.png" alt="Script Output">
+
+<p>Possible todo list:</p>
+<ul>
+  <li>Make it that the results are mapped to each country on a provided image</li>
+  <li>Add the option to do this for different areas of the world, or do it for the whole world at once</li>
+  <li>Allow for user input to let people enter from the terminal the query they want to execute</li>
+</ul>
