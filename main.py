@@ -1,10 +1,21 @@
 import requests
-import json
 
-query = "Why+is+Germany+so+"
 
-results = requests.get("http://suggestqueries.google.com/complete/search?q="+query+"&client=firefox&hl=en")
+with open("euroCountries.txt") as f:
+  countriesList = f.readlines()
 
-resultsJSON = results.json()
+countriesList = [line.rstrip('\n') for line in open("euroCountries.txt")]
 
-print(resultsJSON[1][0])
+listLength = len(countriesList)
+
+i = 0
+
+while i < listLength:
+    query = "Why+is+" + countriesList[i] + "+so+"
+
+    results = requests.get("http://suggestqueries.google.com/complete/search?q="+query+"&client=firefox&hl=en")
+
+    resultsJSON = results.json()
+
+    print(resultsJSON[1][0])
+    i+=1
